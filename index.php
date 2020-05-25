@@ -1,5 +1,5 @@
 <?php
-require("config.php");
+require("global.php");
 require("public/template/loader.php");
 
 if(isset($_GET["action"])) {
