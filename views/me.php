@@ -69,7 +69,7 @@
                         </div>
                     </form>
                     <a class="btn btn-light action-button" role="button" href="#" style="margin-right: 5px; background-color: rgb(86, 198, 131);">Jouer</a>
-                    <a class="btn btn-light action-button" role="button" href="#" style="background-color: rgb(222, 104, 96);">Déconnexion</a>
+                    <a class="btn btn-light action-button" role="button" href="?action=logout" style="background-color: rgb(222, 104, 96);">Déconnexion</a>
                 </div>
             </div>
         </nav>
@@ -81,7 +81,7 @@
                             <div style="height: 80px; width: 100px; background-image: url('public/assets/img/backdrop.png'); background-position: 50%; border-top-left-radius: 5px; float: left;">
                                 <div
                                     style="
-                                        background-image: url('https://www.avatar-api.com/habbo-imaging/avatarimage.php?figure=lg-275-82.hr-3163-45.fa-3344-91.sh-295-110.cc-3905-63.hd-180-3.ch-215-1413');
+                                        background-image: url('https://www.avatar-api.com/habbo-imaging/avatarimage.php?figure=<?= $userInfo["look"] ?>');
                                         height: 80px;
                                         background-repeat: no-repeat;
                                         background-position: 50% 10%;
@@ -91,8 +91,8 @@
                                 ></div>
                             </div>
                             <div style="width: calc(100% - 100px); height: 80px; background-color: rgb(203, 203, 203); float: right; border-top-right-radius: 5px; float: left;">
-                                <h5 style="display: block; margin-bottom: 0px; color: rgb(91, 91, 91); margin-right: 30px; margin-left: 30px; margin-top: 18px;">Tig3r</h5>
-                                <span style="margin-left: 30px; color: rgb(119, 120, 120); margin-right: 30px;">cc toi</span>
+                                <h5 style="display: block; margin-bottom: 0px; color: rgb(91, 91, 91); margin-right: 30px; margin-left: 30px; margin-top: 18px;"><?= $userInfo["username"] ?></h5>
+                                <span style="margin-left: 30px; color: rgb(119, 120, 120); margin-right: 30px;"><?= $userInfo["motto"] ?></span>
                             </div>
                             <div style="background-color: #fff; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; padding-top: 15px; padding-bottom: 15px; padding-right: 15px; float: left; width: 100%;">
                                 <div style="background-color: #f8e272; width: calc(33.33333% - 15px); margin-left: 15px; padding: 10px; border-radius: 10px; float: left;">

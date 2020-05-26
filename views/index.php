@@ -19,11 +19,14 @@
     <div class="form-container">
         <div class="image-holder" style="background-image: url(&quot;public/assets/img/h1480966641bc.png&quot;);background-position: 80%;border-top-left-radius: 5px;border-bottom-left-radius: 5px;"><img src="public/assets/img/yobba.gif" style="margin-left: 0px;margin-top: -58px;padding: 4px;border-top-left-radius: 5px;border-bottom-right-radius: 5px;"></div>
         <form method="post" style="border-top-right-radius: 5px;border-bottom-right-radius: 5px;">
+            <?php if(isset($error)) { ?>
+                <div class="alert alert-danger" role="alert"><span><strong>Alert</strong> <?= $error ?></span></div>
+            <?php } ?>
             <div class="form-group">
-                <input class="form-control" type="email" name="username" placeholder="Pseudo" style="background-color: rgb(238,238,238);">
+                <input name="login-username" class="form-control" type="text" name="username" placeholder="Pseudo" style="background-color: rgb(238,238,238);">
             </div>
             <div class="form-group">
-                <input class="form-control" type="password" name="password" placeholder="Mot de passe" style="background-color: rgb(238,238,238);">
+                <input name="login-password" class="form-control" type="password" name="password" placeholder="Mot de passe" style="background-color: rgb(238,238,238);">
             </div>
             <div class="form-group">
                 <button class="btn btn-primary btn-block" type="submit" style="margin-top: 25px;background-color: #62ab50;">Se connecter</button>
