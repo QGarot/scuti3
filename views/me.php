@@ -96,13 +96,13 @@
                             </div>
                             <div style="background-color: #fff; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; padding-top: 15px; padding-bottom: 15px; padding-right: 15px; float: left; width: 100%;">
                                 <div style="background-color: #f8e272; width: calc(33.33333% - 15px); margin-left: 15px; padding: 10px; border-radius: 10px; float: left;">
-                                    <img src="public/assets/img/credits.png" /><span style="margin-left: 5px; color: rgb(255, 255, 255);">10000</span>
+                                    <img src="public/assets/img/credits.png" /><span style="margin-left: 5px; color: rgb(255, 255, 255);"><?= $userInfo["credits"] ?></span>
                                 </div>
                                 <div style="background-color: #ef8fb2; width: calc(33.33333% - 15px); margin-left: 15px; padding: 10px; border-radius: 10px; float: left;">
-                                    <img src="public/assets/img/duckets.png" /><span style="margin-left: 5px; color: rgb(255, 255, 255);">10000</span>
+                                    <img src="public/assets/img/duckets.png" /><span style="margin-left: 5px; color: rgb(255, 255, 255);"><?= getDuckets($_SESSION["id"]) ?></span>
                                 </div>
                                 <div style="background-color: #9fcffb; width: calc(33.33333% - 15px); margin-left: 15px; padding: 10px; border-radius: 10px; float: left;">
-                                    <img src="public/assets/img/diamonds.png" /><span style="margin-left: 5px; color: rgb(255, 255, 255);">0</span>
+                                    <img src="public/assets/img/diamonds.png" /><span style="margin-left: 5px; color: rgb(255, 255, 255);"><?= getDiamonds($_SESSION["id"]) ?></span>
                                 </div>
                             </div>
                         </div>
@@ -163,12 +163,14 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-4 col-xl-6">
-                        <div style="margin-top: 20px; height: 271px; border-radius: 5px; background-image: url('public/assets/img/h1460020471bc.png'); float: left; width: 100%; box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.09); background-position: 80%;">
-                            <h5 class="text-break" style="color: rgb(255, 255, 255); margin: 18px; margin-bottom: 0px;">Article</h5>
-                            <div style="float: right; text-align: center; padding: 8px; background-color: #62ab50; border-radius: 10px; cursor: pointer; margin-right: 5px; margin-top: 183px;">
-                                <span style="color: rgb(255, 255, 255);">En savoir plus</span>
+                        <?php while($article = $reqLastNew->fetch()) { ?>
+                            <div style="margin-top: 20px; height: 271px; border-radius: 5px; background-image: url('<?= $article["image"] ?>'); float: left; width: 100%; box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.09); background-position: 80%;">
+                                <h5 class="text-break" style="color: rgb(255, 255, 255); margin: 18px; margin-bottom: 0px;"><?= $article["title"] ?></h5>
+                                <div style="float: right; text-align: center; padding: 8px; background-color: #62ab50; border-radius: 10px; cursor: pointer; margin-right: 5px; margin-top: 183px;">
+                                    <span style="color: rgb(255, 255, 255);">En savoir plus</span>
+                                </div>
                             </div>
-                        </div>
+                        <?php } ?>
                     </div>
                     <div class="col-md-4 col-xl-3">
                         <div style="margin-top: 20px; background-color: #ffffff; float: left; width: 100%; border-radius: 5px;">
