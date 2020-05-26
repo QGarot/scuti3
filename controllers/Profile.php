@@ -5,4 +5,5 @@ if(!isset($_SESSION["id"])) {
 
 $userInfo = getUserById($_SESSION["id"]);
 $reqRooms = getAllRooms();
+$reqLastNew = getLastNews(1);
 require("views/me.php");
