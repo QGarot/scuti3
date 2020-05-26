@@ -9,7 +9,7 @@ if(isset($_POST["login-username"], $_POST["login-password"])) {
             if(password_verify($_POST["login-password"], getPasswordCrypted($loginUsername))) {
                 $userInfo = getUserByUsername($loginUsername);
                 $_SESSION["id"] = $userInfo["id"];
-                header("Location: ?action=me");
+                header("Location: index.php?action=me");
             } else {
                 $error = "Données incorrectes !";
             }
