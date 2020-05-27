@@ -10,3 +10,13 @@ $(document).ready(function() {
 $(".room-thumbnails").hover(function() {
     $(this).children().slideToggle(duration=150)
 })
+
+$("#more-friends").click(function() {
+    $("body").addClass("scroll-disabled")
+    $("#all-friends").fadeIn(300)
+})
+
+$(".close-div").click(function() {
+    $(this).parent().parent().parent().fadeOut(300)
+    $("body").removeClass("scroll-disabled")
+})
