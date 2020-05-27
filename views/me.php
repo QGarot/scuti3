@@ -129,24 +129,14 @@
                     <div class="col-md-4 col-xl-3">
                         <div style="margin-top: 20px; background-color: #ffffff; float: left; width: 100%; border-radius: 5px;">
                             <h5 style="color: rgb(116, 116, 116); padding: 10px; border-bottom: 1px solid #eaeaea; margin-bottom: 10px;">Mes amis<i class="material-icons" style="float: right;">expand_more</i></h5>
+                            <?php while($friend = $friends->fetch()) { $friendInfo = getUserById($friend["user_two_id"]); ?>
                             <div class="friends" style="float: left; width: 100%; margin-bottom: 10px;">
                                 <div style="float: left; width: 54px; height: 62px; border-radius: 10px; background-image: url('public/assets/img/backdrop.png'); background-position: -95px 100%; margin-left: 10px;">
-                                    <img src="public/assets/img/avatarimage.png" />
+                                    <img src="https://www.avatar-api.com/habbo-imaging/avatarimage.php?figure=<?= $friendInfo["look"] ?>&headonly=1" />
                                 </div>
-                                <span style="float: left; margin-top: 15px; margin-left: 10px; color: rgb(91, 91, 91);">Pseudo</span>
+                                <span style="float: left; margin-top: 15px; margin-left: 10px; color: rgb(91, 91, 91);"><?= $friendInfo["username"] ?></span>
                             </div>
-                            <div style="float: left; width: 100%; margin-bottom: 10px;">
-                                <div style="float: left; width: 54px; height: 62px; border-radius: 10px; background-image: url('public/assets/img/backdrop.png'); background-position: -95px 100%; margin-left: 10px;">
-                                    <img src="public/assets/img/avatarimage.png" />
-                                </div>
-                                <span style="float: left; margin-top: 15px; margin-left: 10px; color: rgb(91, 91, 91);">Pseudo</span>
-                            </div>
-                            <div style="float: left; width: 100%; margin-bottom: 10px;">
-                                <div style="float: left; width: 54px; height: 62px; border-radius: 10px; background-image: url('public/assets/img/backdrop.png'); background-position: -95px 100%; margin-left: 10px;">
-                                    <img src="public/assets/img/avatarimage.png" />
-                                </div>
-                                <span style="float: left; margin-top: 15px; margin-left: 10px; color: rgb(91, 91, 91);">Pseudo</span>
-                            </div>
+                            <?php } ?>
                         </div>
                     </div>
                     <div class="col-md-4 col-xl-3">
