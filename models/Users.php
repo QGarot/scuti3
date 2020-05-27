@@ -44,7 +44,7 @@ function getDuckets($id) {
 
 function getFriends($id, $limited = true) {
     global $db;
-    if(!$limited) {
+    if($limited) {
         $req = $db->prepare("SELECT user_two_id FROM messenger_friendships WHERE user_one_id = ? ORDER BY friends_since DESC LIMIT 3");
     } else {
         $req = $db->prepare("SELECT user_two_id FROM messenger_friendships WHERE user_one_id = ?");
