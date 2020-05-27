@@ -14,6 +14,25 @@
     </head>
 
     <body style="font-family: ABeeZee, sans-serif; background-color: #eaeaea; min-height: 100%;">
+
+        <!-- All friends -->
+        <div id="all-friends" style="background-color: rgba(234,234,234,0.8);position:fixed;height:100%;width:100%;z-index:9999;display:none;">
+            <div style="background-color: #ffffff;margin-right: auto;margin-left: auto;margin-top: 150px;width: 500px;border-radius: 5px;box-shadow: 3px 3px 6px rgba(0,0,0,0.25);z-index:9999;">
+            <h5 style="color: rgb(116,116,116);padding: 10px;border-bottom: 1px solid #EAEAEA;margin-bottom: 0px;">Tous mes amis<i class="material-icons close-div" style="cursor:pointer;float: right;background-color: #eb5757;border-radius: 5px;color: rgb(255,255,255);padding-left: 1px;">close</i></h5>
+            <div style="overflow-y: auto;height: 328px;">
+            <?php while($friend = $allFriends->fetch()) { $friendInfo = getUserById($friend["user_two_id"]); ?>
+                <div style="padding: 10px;">
+                    <div style="width: 54px;height: 62px;border-radius: 10px;background-image: url('public/assets/img/backdrop.png');background-position: -95px 100%;">
+                        <img src="https://www.avatar-api.com/habbo-imaging/avatarimage.php?figure=<?= $friendInfo["look"] ?>&headonly=1">
+                    </div>
+                    <span style="float: left;margin-top: -58px;margin-left: 65px;font-size: 17px;color: rgb(130,128,128);"><strong><?= $friendInfo["username"] ?></strong></span>
+                    <span style="float: left;margin-top: -35px;margin-left: 65px;color: rgb(177,175,175);"><?= $friendInfo["motto"] ?></span>
+                </div>
+            <?php } ?>
+            </div>
+            </div>
+        </div>
+
         <div style="background-image: url('public/assets/img/1536292421.gif'); padding-top: 25px; padding-bottom: 25px;">
             <div class="container">
                 <div class="row">
@@ -128,7 +147,7 @@
                     </div>
                     <div class="col-md-4 col-xl-3">
                         <div style="margin-top: 20px; background-color: #ffffff; float: left; width: 100%; border-radius: 5px;">
-                            <h5 style="color: rgb(116, 116, 116); padding: 10px; border-bottom: 1px solid #eaeaea; margin-bottom: 10px;">Mes amis<i class="material-icons" style="float: right;">expand_more</i></h5>
+                            <h5 style="color: rgb(116, 116, 116); padding: 10px; border-bottom: 1px solid #eaeaea; margin-bottom: 10px;">Mes amis<i id="more-friends" class="material-icons" style="float: right;cursor:pointer;">expand_more</i></h5>
                             <?php while($friend = $friends->fetch()) { $friendInfo = getUserById($friend["user_two_id"]); ?>
                             <div class="friends" style="float: left; width: 100%; margin-bottom: 10px;">
                                 <div style="float: left; width: 54px; height: 62px; border-radius: 10px; background-image: url('public/assets/img/backdrop.png'); background-position: -95px 100%; margin-left: 10px;">
