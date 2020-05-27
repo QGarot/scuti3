@@ -41,3 +41,14 @@ function getDuckets($id) {
     $req->execute(array($id));
     return $req->fetch()["amount"];
 }
+
+function getFriends($id, $limited = true) {
+    global $db;
+    if(!$limited) {
+        $req = $db->prepare("SELECT user_two_id FROM messenger_friendships WHERE user_one_id = ? ORDER BY friends_since DESC LIMIT 3");
+    } else {
+        $req = $db->prepare("SELECT user_two_id FROM messenger_friendships WHERE user_one_id = ?");
+    }
+    $req->execute(array($id));
+    return $req;
+}
