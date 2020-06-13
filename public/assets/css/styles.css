@@ -4,4 +4,8 @@ a:hover {
 }
 
 
+body::-webkit-scrollbar {
+ 
+  display: none;
 
+}

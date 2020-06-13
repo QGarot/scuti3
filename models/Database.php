@@ -12,4 +12,4 @@ function connectdb($hostname, $dbname, $user, $password) {
     }
 }
 
-$db = connectdb("localhost", "habbo", "root", "");
+$db = connectdb("localhost", "yobba", "root", "");

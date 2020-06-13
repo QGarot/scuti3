@@ -1,0 +1,1 @@
+ALTER TABLE permissions ADD divcolor VARCHAR(255);

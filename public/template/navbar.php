@@ -5,7 +5,7 @@
          <ul class="nav navbar-nav">
             <li class="nav-item" role="presentation">
                <div class="nav-item dropdown">
-                  <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#" style="color: rgb(85, 85, 85); margin-right: 10px; text-decoration: none;"><?= $userInfo["username"] ?></a>
+                  <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#" style="color: rgb(85, 85, 85); margin-right: 10px; text-decoration: none;"><?= getUserById($_SESSION["id"])["username"] ?></a>
                   <div class="dropdown-menu" role="menu">
                      <a class="dropdown-item" role="presentation" href="#">Paramètres</a>
                      <a class="dropdown-item" role="presentation" href="#">cc</a>
