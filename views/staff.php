@@ -39,12 +39,12 @@
                            <?php
                            $reqUserStaff = getUsersRanked($rankInfo["id"]);
                            while($staff = $reqUserStaff->fetch()) { ?>
-                           <div style="width: calc(25% - 15px);height: 100px;float: left;margin-left: 15px;background-color: #dedede;margin-top: 15px;background-image: url('https://media.discordapp.net/attachments/699294500425695283/719270058496491601/unknown.png');border-top-right-radius: 15px;border-top-left-radius: 15px;">
-                              <div style="height: 78px;width: 100%;background-color: rgba(0,0,0,0.45);border-top-left-radius: 15px;border-top-right-radius: 15px;">
-                                 <div style="height: 78px;background-image: url('https://www.avatar-api.com/habbo-imaging/avatarimage.php?figure=<?= $staff["look"] ?>');background-repeat: no-repeat;width: 100%;-webkit-filter: drop-shadow(2px 1px 0 #fff) drop-shadow(-2px 0px 0 #fff) drop-shadow(0 -3px 0 #fff);background-position: center 0px;"></div>
+                              <div style="width: calc(25% - 15px);height: 100px;float: left;margin-left: 15px;background-color: #dedede;margin-top: 15px;background-image: url('https://media.discordapp.net/attachments/699294500425695283/719270058496491601/unknown.png');border-top-right-radius: 15px;border-top-left-radius: 15px;">
+                                 <div style="height: 78px;width: 100%;background-color: rgba(0,0,0,0.45);border-top-left-radius: 15px;border-top-right-radius: 15px;">
+                                    <div style="height: 78px;background-image: url('https://www.avatar-api.com/habbo-imaging/avatarimage.php?figure=<?= $staff["look"] ?>');background-repeat: no-repeat;width: 100%;-webkit-filter: drop-shadow(2px 1px 0 #fff) drop-shadow(-2px 0px 0 #fff) drop-shadow(0 -3px 0 #fff);background-position: center 0px;"></div>
+                                 </div>
+                                 <span class="text-truncate text-center" style="width: 100%;float: left;background-color: #eaeaea;color: rgb(85,85,85);font-size: 15px;"><?= $staff["username"] ?></span>
                               </div>
-                              <span class="text-truncate text-center" style="width: 100%;float: left;background-color: #eaeaea;color: rgb(85,85,85);font-size: 15px;"><?= $staff["username"] ?></span>
-                           </div>
                            <?php } ?>
                         </div>
                      </div>
@@ -68,15 +68,7 @@
             </div>
          </div>
       </div>
-      <div>
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <div style="margin-top: 20px;padding: 10px;margin-bottom: 20px;background-color: #ffffff;float: left;width: 100%;border-radius: 5px;"><img src="public/assets/img/me_credits_active.gif"><span style="margin-left: 10px;">© <strong>Scuti3</strong> | Développé avec <i class="fa fa-heart" style="color: rgb(238,82,72);"></i>&nbsp;par <strong>Tig3r</strong></span></div>
-               </div>
-            </div>
-         </div>
-      </div>
+      <?php require("public/template/footer.php"); ?>
       <script src="public/assets/js/jquery.min.js"></script>
       <script src="public/assets/bootstrap/js/bootstrap.min.js"></script>
       <script src="public/assets/js/functions.js"></script>
