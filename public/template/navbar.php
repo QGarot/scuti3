@@ -7,9 +7,9 @@
                <div class="nav-item dropdown">
                   <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#" style="color: rgb(85, 85, 85); margin-right: 10px; text-decoration: none;"><?= getUserById($_SESSION["id"])["username"] ?></a>
                   <div class="dropdown-menu" role="menu">
+                     <a class="dropdown-item" role="presentation" href="?action=me">Profil</a>
                      <a class="dropdown-item" role="presentation" href="#">Paramètres</a>
-                     <a class="dropdown-item" role="presentation" href="#">cc</a>
-                     <a class="dropdown-item" role="presentation" href="#">c moi</a>
+                     <a class="dropdown-item" role="presentation" href="#">bla</a>
                   </div>
                </div>
             </li>
@@ -19,7 +19,7 @@
                <div class="nav-item dropdown">
                   <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#" style="color: rgb(85, 85, 85); margin-right: 10px; text-decoration: none;">Communauté</a>
                   <div class="dropdown-menu" role="menu">
-                     <a class="dropdown-item" role="presentation" href="#">Equipe</a>
+                     <a class="dropdown-item" role="presentation" href="?action=staff">Equipe</a>
                      <a class="dropdown-item" role="presentation" href="#">Palmares</a>
                      <a class="dropdown-item" role="presentation" href="#">Photos</a>
                   </div>
