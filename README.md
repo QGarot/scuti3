@@ -1,6 +1,8 @@
-## Scuti3
+## :zap: Scuti3
 An Arcturus CMS written in PHP (MVC structure)
-__Status__ : unfinished
+
+### Version
+:x: v3.0.0 ([ ]unfinished, [x] not stable)
 
 ### Installation
 You have to configure **models/Database.php**.
