@@ -1,5 +1,6 @@
 ## Scuti3
 An Arcturus CMS written in PHP (MVC structure)
+__Status__ : unfinished
 
 ### Installation
 You have to configure **models/Database.php**.
